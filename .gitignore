@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# Local environment variables (Contains DB passwords!)
+.env
+.env.local
+
+# Prisma-specific generated artifacts (optional but common)
+# Note: Do NOT ignore prisma/schema.prisma or prisma/migrations/
