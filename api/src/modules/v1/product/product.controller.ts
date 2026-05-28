@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as productService from './product.service';
-import { asyncHandler } from '../../shared/utils/asyncHandler';
-import { sendSuccess, sendCreated, sendPaginated } from '../../shared/utils/response';
+import { asyncHandler } from '../../../shared/utils/asyncHandler';
+import { sendSuccess, sendCreated, sendPaginated } from '../../../shared/utils/response';
 
 export const listProducts = asyncHandler(async (req: Request, res: Response) => {
   const { products, meta } = await productService.listProducts(req);

@@ -1,6 +1,6 @@
 import { prisma } from '../config/database';
-import * as reservationRepository from '../modules/reservation/reservation.repository';
-import * as productRepository from '../modules/product/product.repository';
+import * as reservationRepository from '../modules/v1/reservation/reservation.repository';
+import * as productRepository from '../modules/v1/product/product.repository';
 import { deleteCachedReservation } from '../cache/reservation.cache';
 import { invalidateStockCache } from '../cache/stock.cache';
 

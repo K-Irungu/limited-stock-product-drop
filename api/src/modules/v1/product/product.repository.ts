@@ -1,4 +1,4 @@
-import { prisma } from '../../config/database';
+import { prisma } from '../../../config/database';
 import { CreateProductInput, UpdateProductInput } from './product.types';
 
 export const findProducts = async (

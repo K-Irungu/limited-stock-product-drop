@@ -1,12 +1,12 @@
 import * as reservationRepository from './reservation.repository';
 import * as productRepository from '../product/product.repository';
-import { setCachedReservation, deleteCachedReservation } from '../../cache/reservation.cache';
-import { invalidateStockCache } from '../../cache/stock.cache';
+import { setCachedReservation, deleteCachedReservation } from '../../../cache/reservation.cache';
+import { invalidateStockCache } from '../../../cache/stock.cache';
 import { CreateReservationInput } from './reservation.types';
-import { NotFoundError, ConflictError, BadRequestError } from '../../shared/errors/errors';
-import { parsePagination, buildPaginationMeta } from '../../shared/utils/pagination';
-import { RESERVATION_TTL_SECONDS } from '../../config/constants';
-import { prisma } from '../../config/database';
+import { NotFoundError, ConflictError, BadRequestError } from '../../../shared/errors/errors';
+import { parsePagination, buildPaginationMeta } from '../../../shared/utils/pagination';
+import { RESERVATION_TTL_SECONDS } from '../../../config/constants';
+import { prisma } from '../../../config/database';
 import { Request } from 'express';
 
 export const listReservations = async (req: Request) => {
