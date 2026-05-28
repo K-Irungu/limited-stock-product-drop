@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as orderService from './order.service';
-import { asyncHandler } from '../../shared/utils/asyncHandler';
-import { sendSuccess, sendCreated, sendPaginated } from '../../shared/utils/response';
+import { asyncHandler } from '../../../shared/utils/asyncHandler';
+import { sendSuccess, sendCreated, sendPaginated } from '../../../shared/utils/response';
 
 export const listOrders = asyncHandler(async (req: Request, res: Response) => {
   const { orders, meta } = await orderService.listOrders(req);

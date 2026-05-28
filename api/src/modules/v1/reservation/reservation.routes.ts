@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import * as reservationController from './reservation.controller';
-import { validate } from '../../shared/middleware/validate.middleware';
+import { validate } from '../../../shared/middleware/validate.middleware';
 import { createReservationSchema } from './reservation.schema';
-import { reservationRateLimiter } from '../../shared/middleware/rateLimiter.middleware';
+import { reservationRateLimiter } from '../../../shared/middleware/rateLimiter.middleware';
 
 const router = Router();
 
