@@ -1,8 +1,8 @@
 import * as productRepository from './product.repository';
-import { getCachedStock, setCachedStock } from '../../cache/stock.cache';
+import { getCachedStock, setCachedStock } from '../../../cache/stock.cache';
 import { CreateProductInput, UpdateProductInput, ProductQuery } from './product.types';
-import { NotFoundError } from '../../shared/errors/errors';
-import { parsePagination, buildPaginationMeta } from '../../shared/utils/pagination';
+import { NotFoundError } from '../../../shared/errors/errors';
+import { parsePagination, buildPaginationMeta } from '../../../shared/utils/pagination';
 import { Request } from 'express';
 
 export const listProducts = async (req: Request) => {
